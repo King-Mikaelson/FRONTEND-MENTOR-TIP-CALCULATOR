@@ -1,0 +1,434 @@
+
+/* --------------*/
+/*General Resets */
+/* --------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: 'Space Mono', monospace;
+}
+
+/* Ressetting margins of elements */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+picture {
+    margin : 0
+}
+
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p{
+   font-weight: 100;
+}
+
+/* Setting up our body */
+body {
+    /* height: 100vh; */
+    background-color:hsl(185, 41%, 84%);
+    font-size: 24px;
+    /* font-family: 'Kumbh Sans', sans-serif; */
+}
+
+/* Making Images easier to easier to style */
+img,
+picture {
+max-width: 100%;
+display: block; 
+}
+
+/* Making forms easier to work with */
+input,
+button,
+text-area,
+select {
+    font : inherit
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Removing list styles on ul,ol elements */
+ul[role = "list"],
+li[role="list"] {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 1440px;
+}
+
+.main{
+    display:flex;
+    flex-direction: row;
+    background-color: hsl(189, 41%, 97%);
+    width: 900px;
+    border-radius: 1.2rem;
+    margin: 1rem 5rem;
+    padding: 3rem;
+    font-family: 'Space Mono', monospace;
+    height: 500px
+}
+
+.first-part{
+    color: hsl(186, 14%, 43%);
+    font-family: 'Space Mono', monospace;
+    width: 50%;
+    margin-bottom: 2rem;
+    padding-right: 12rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem
+}
+
+.input label{
+    font-size: 20px;
+    padding-top: 10rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  color: red;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.input input[type=number]{
+    text-align: right;
+    padding-right: 1rem;
+    border-radius: 0.3rem;
+    border:none;
+    cursor: pointer;
+    background-color: hsl(185, 41%, 84%);
+    width: 20rem;
+}
+
+.input input[type=number]:hover{
+    border: 1.2px solid hsl(172, 67%, 45%);
+}
+
+.input{
+    position: relative
+}
+
+.icon{
+    position: absolute;
+    top: 35px;
+    left: 1rem;
+}
+
+.input input:is(:focus, :valid){
+    outline-color: hsl(172, 67%, 45%)
+}
+
+.select-tip{
+    font-size: 20px;
+    margin-top: 2.5rem;
+}
+
+
+
+.tip-parent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} 
+
+
+.tip-child{
+    width: 6rem;
+    background-color: hsl(183, 100%, 15%);
+    margin: 0.1rem;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    padding-right: 2rem;
+    color:hsl(189, 41%, 97%);
+    border: none;
+    cursor: pointer;
+}
+
+.tip-child{
+    text-align: right
+}
+
+
+.tip-child.number{
+    padding-right: 0rem;
+    background-color: hsl(185, 41%, 84%);
+    color: black;
+    border: none;
+    
+}
+
+.tip-child.number::placeholder{
+    color:  hsl(184, 14%, 56%);
+    font-size: 20px;
+    padding-right: 0.7rem;
+}
+
+.tip-child.number:is(:focus, :valid){
+    outline-color: hsl(172, 67%, 45%)
+}
+
+.tip-child.number:hover{
+    border: 1.2px solid hsl(172, 67%, 45%);
+}
+
+
+.tip-child:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%)!important;
+}
+
+
+.input.three{
+    margin-top: 3rem
+}
+
+
+
+
+.second-part{
+    width:50%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 1rem;
+    padding: 2rem;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: hsl(189, 41%, 97%);
+}
+
+.total.two{
+    padding-bottom: 3.5rem
+}
+
+.total-one{
+    font-size: 1.5rem;
+}
+
+.total-one-small{
+    font-size: 1rem;
+    color: hsl(184, 14%, 56%)
+}
+
+.tip-amount-text{
+    font-size: 2.5rem;
+    color: hsl(172, 67%, 45%)
+}
+
+.reset{
+    align-self: center;
+
+}
+
+.reset input {
+    border: none;
+    width: 20rem;
+    padding: 0.2rem;
+    text-transform: uppercase;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    border-radius: 0.3rem;
+
+}
+
+.reset input:hover{
+    background-color: hsl(185, 41%, 84%)
+}
+
+
+@media (max-width: 991px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        margin-top: 10rem;
+    }
+
+
+    .main{
+        display:flex;
+        flex-direction: column;
+        background-color: hsl(189, 41%, 97%);
+        width: 90%;
+        border-radius: 1.2rem;
+        margin: 1rem 1rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        font-family: 'Space Mono', monospace;
+        height: 1200px
+    }
+
+    .logo{
+        margin: 0rem;
+    }
+
+
+    .input input[type=number]{
+        width: 17rem;
+    }
+
+
+    
+.select-tip{
+    font-size: 15px;
+    margin-top: 1.5rem;
+}
+
+.tip-parent form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 240px;
+    align-content: flex-start;
+    width: 50%;
+}
+
+ 
+.tip-child{
+   flex: 0 0 60px;
+   width: 120px;
+   padding: 10px 40px;
+   text-align: center;
+   margin: 10px;
+}
+ 
+.tip-child.number{
+    padding: 0rem; 
+}
+
+.input.three{
+    margin-top :0rem;
+}
+
+.input.three label {
+ /* need to fix this sha aligning problems */
+   border: 1px solid red;
+   font-size: 0.756rem;
+}
+
+.input.three .number-div{
+    margin-top: 0.5rem;
+}
+
+.input.three .icon{
+    position: absolute;
+    top: 2.5rem;
+    left: 1rem;
+}
+
+.second-part{
+    width:100%;
+    padding: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap:3rem;
+    color: hsl(189, 41%, 97%);
+}
+
+.total.two{
+    padding: 2rem;
+}
+
+.total-one{
+    /* This needs to be fixed too okayyyy */
+    font-size: 1rem;
+    padding-right: 2rem;
+}
+
+.total-one-small{
+    font-size: 0.6rem;
+    color: hsl(184, 14%, 56%)
+}
+
+.tip-amount-text{
+    font-size: 2.2rem;
+    color: hsl(172, 67%, 45%)
+}
+
+.reset{
+    padding: 0rem;
+}
+
+
+
+.reset input {
+    width: 17rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

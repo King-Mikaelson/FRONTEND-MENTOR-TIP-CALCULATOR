@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <title>TIP-CALCULATOR</title>
+</head>
+<body>
+    <section class="container">
+        <div class="logo">
+            <img src="/TIP-CALCULATOR/images/logo.svg">
+        </div>
+
+        <!-- <p class="paragraph">A test paragraph
+        </p> -->
+
+        <div class="main">
+            <div class="first-part">
+                <form class="input clear-default">
+                    <label for="bill" class="bill">Bill</label>
+                    <div>
+                    <input class="bill-input" type="number" placeholder="0" required>
+                    <img class="icon" src="/TIP-CALCULATOR/images/icon-dollar.svg">
+                    </div>
+                    
+                </form>
+
+                <div class="select-tip">
+                    <p>Select Tip %</p>
+                </div>
+
+                <div class="tip-parent">
+                    <form class="tip-input clear-default">
+                    <input type="button" class="tip-child" value="5%" required>
+                    <input type="button" class="tip-child" value="10%" required>
+                    <input type="button" class="tip-child" value="15%" required>
+                    <input type="button" class="tip-child" value="25%" required>
+                    <input type="button" class="tip-child" value="50%" required>
+                    
+                    <input class="tip-child number" type="number" placeholder="Custom" required>
+                    </form>
+                </div>
+
+                    <form class="input three clear-default">
+                        <label for="num-people" class="num-people">Number Of People</label>
+                        <div class= "number-div">
+                        <input class="people-input" type="number" placeholder="0">
+                        <img class="icon" src="/TIP-CALCULATOR/images/icon-person.svg">
+                        </div>
+                        
+                    </form>
+            
+
+
+        </div>
+
+
+            <div class="second-part">
+                <div class="total one">
+                    <div class="total-one">
+                        <p>Tip Amount</p>
+                        <p class="total-one-small">/ person</p>
+                    </div>
+
+                    <p class="tip-amount-text">$<span class="display-tip-amount">4.27</spanclass></p>
+                </div>
+
+
+                <div class="total two">
+                    <div class="total-one">
+                        <p>Total</p>
+                        <p class="total-one-small">/ person</p>
+                    </div>
+
+                    <p class="tip-amount-text">$<span class="display-total-people">32.79</span></p>
+                </div>
+
+                <div class="reset">
+                    <input class="reset-button" type="button" value="reset" required>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        .paragraph span{
+            display:none;
+        }
+    </style>
+    <script src="script.js"></script>
+</body>
+</html>
